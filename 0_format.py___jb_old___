@@ -1,0 +1,400 @@
+__builtins__.end = None
+
+'''
+adj="lovely"
+name="Rabbits"
+print("{} are {} animal".format(name,adj))
+
+print("{0:.3f}".format(1.0/3))
+
+print("{0:*^11}".format("Hello"))
+
+print("{name:*^10} is best in the {where}".format(name='PHP',where='world'))
+'''
+
+'''print("a",end='')
+print("b",end='')
+print("c\n")
+'''
+
+'''
+print('What\'s your name?')
+print('The file is in D\\')
+print("This is first line\nThis is second line")
+print("The line will\
+not the end") #this line == print("The line will not the end")
+print(r"The \" is \\ a \t row \n line")
+'''
+
+'''
+����='Hello'
+print(����)
+_1ver="World"
+print(_1ver)
+'''
+
+'''
+s="This is a long string.\
+This continues the string.\
+This is called ��ʾ������\
+(Explict Line Joining)"
+print(s)
+'''
+
+'''
+str_1='a'
+str_2='b'
+num_1=3
+num_2=6
+num_3=0
+num_4=1
+print(str_1+str_2)
+#print(str_1-str_2) has no meaning
+print(str_1*3+str_2*3)
+print(num_1**3)
+print(num_3>>2)
+print(num_4<<2)
+print(not 0)
+print(1 or 0)
+'''
+
+'''
+a=3
+a**=3
+print(a)
+'''
+
+'''
+print("Please Enter The Interger:")
+right_number=23
+guess=int(input())
+    if guess==right_number:
+        print("Congratulations! You guess right!")
+    elif guess>right_number:
+        print("No, its a little higher than it!")
+    else:
+        print("No, its a little lower than it!")
+print("{string:*^10}".format(string="END"))
+'''
+
+'''
+import sys
+print("The command line arguments are:")
+for i in sys.argv:
+    print(i)
+
+print("\n\nThe PythonPath is",sys.path,"\n")
+'''
+
+'''
+import math
+print("Enter num:")
+num=int(input())
+print("The square root is:",math.sqrt(num))
+
+import os
+print(os.getcwd)
+'''
+
+'''
+from math import sqrt
+print("Enter num:")
+num=int(input())
+print("The square root is\
+{number:*^99}:".format(number=sqrt(num)))
+'''
+
+'''
+import math
+print("---Enter age and number---")
+age=int(input("Age:"))
+number=int(input("Number:"))
+print("\nWhen its INT")
+print("Number is {1:*^10}\nAge    is {0:*^10} \
+".format(math.sqrt(age),math.sqrt(number)))
+print("\nWhen its Float")
+age=float(age)
+number=float(number)
+print("Number is {1:*^10}\nAge    is {0:*^10} \
+".format(math.sqrt(age),math.sqrt(number)))
+print("\nWhen its Complex")
+'''
+
+'''
+import math
+from math import sqrt
+print("Enter what you want:")
+judge=bool(input())
+if judge:
+    print("The square is {0:*^20}".format(sqrt(judge)))
+'''
+
+
+'''
+import math
+complex_number=complex(input())
+print("{0:*^20}".format(math.sqrt(complex_number)))
+'''
+
+'''
+import cmath
+a=2
+print(cmath.sqrt(a))
+'''
+
+'''
+这是和同一文件夹下的test2.py文件一起的main测试程序1
+import test0
+test0.main()
+'''
+
+'''
+import math as mt
+print("{0}".format(mt.sqrt(16)))
+'''
+
+'''
+animal=["cat","dog","rabbit","monkey","Godzilla"]
+print("Enter the uncommon animals:")
+rkey=5
+while(1):
+    animal_add=input()
+    key=1
+    for i in range(0,rkey):   #== for(i；i<rkey;i++)
+        if animal_add==animal[i]:
+            print("Its common!")
+            key=0
+            break
+    print("\nThe final list is :")
+    if key:
+        animal.insert(rkey,animal_add)
+        rkey=rkey+1
+        for i in range(0,rkey):
+            print(animal[i],end=" ")
+    else:
+        for i in range(0,rkey):
+            print(animal[i],end=" ")
+    print("\nEnter the uncommon animals:")
+#animal[rkey]=animal_add 不能直接对界外位置的列表元素赋值,要用方法
+'''
+
+'''
+animal_0=["cat","dog","rabbit","monkey","Godzilla"]
+animal_1=["shark","lion","elephant","kangaroo","bird"]
+#animal_0.extend(animal_1)
+animal_0.extend(animal_1)
+for i in range(0,10):
+    print(animal_0[i])
+'''
+
+'''
+animal_0=["cat","dog","rabbit","monkey","Godzilla"]
+animal_0.extend(["lion"])
+for i in range(0,6):
+    print(animal_0[i])
+'''
+
+'''
+animal=["cat","dog","rabbit"]
+del animal[0]
+print(animal)
+'''
+
+'''
+animal=["cat","dog","rabbit"]
+delete_animal=animal.pop(0)
+print(delete_animal)
+'''
+
+'''
+animal=["cat","dog","rabbit"]
+delete_animal=animal.remove("cat")
+print(delete_animal)
+'''
+
+'''
+animal=["a","c","b"]
+print("Original list:",animal)
+animal.sort()
+print("Using .sort()")
+print(animal)
+animal.sort(reverse=True)
+print("Using .sort(reserve=True)")
+print(animal)
+print("Using sorted()")
+print(sorted(animal))
+print(len(animal))
+print(animal.index("b"))
+'''
+
+
+'''
+old_zoo=("dog","cat","monkey")
+new_zoo=("python","penguin","elephant",old_zoo)
+print("The old zoo list ",old_zoo)
+print("The new zoo list ",new_zoo)
+print("The old zoo\'s last animal is ",new_zoo[3][2])
+for i in range(0,3):
+    print("The old zoo has {animal}".format(animal=new_zoo[3][i]).title())
+'''
+
+
+'''
+dictionary1={
+"animal0":"cat",
+"animal1":"dog",
+"animal2":"lion",
+"animal3":"monkey"
+}
+max_dic=4
+#key_dic="animal0"
+for i in range(0,max_dic):
+    if i<max_dic:
+        key_dic="animal"+str(i)
+    print("The {0}th animal\'s name is:{1}".format(i,dictionary1[key_dic]))
+    print(key_dic)
+#为什么animal1键值反倒能调用字典里key为animal0的值？
+'''
+
+'''
+dictionary1={
+"animal0":"cat",
+"animal1":"dog",
+"animal2":"lion",
+"animal3":"monkey"
+}
+max_dic=4
+key_dic="animal0"
+for i in range(0,max_dic):
+    print("The {0}th animal\'s name is:{1}".format(i,dictionary1[key_dic]))
+    print(key_dic)
+    if i<max_dic:
+        key_dic="animal"+str(i+1)
+'''
+
+
+
+
+'''
+dictionary1={
+"animal0":"cat",
+"animal1":"dog",
+"animal2":"lion",
+"animal3":"monkey"
+}
+dictionary1["animal4"]=dictionary1
+print(dictionary1["animal4"])
+dictionary1[1+2j]="tiger"
+print(dictionary1[1+2j])
+dictionary1[("nihao")]="Hello"
+print(dictionary1[("nihao")])
+#dictionary1[["nihao"]]="Hello" #列表不可用做键值
+#print(dictionary1[["nihao"]])
+'''
+
+'''
+a=int(input())
+print("The type is :",type(a))
+'''
+
+'''
+string_test=0
+print(str(string_test))
+'''
+
+'''
+#It's wrong
+dictionary1={
+"animal0":"cat",
+"animal1":"dog",
+"animal2":"lion",
+"animal3":"monkey"
+}
+for i in range(0,5):
+    print(dictionary1[i])
+'''
+
+'''
+list_section_test=["cat","dog","python","shark","monkey","Godzilla"]
+print(list_section_test[0:6:2])
+print(list_section_test[-2::-1])
+print(list_section_test[:6:2])
+print(list_section_test[::-2])
+print(list_section_test[:])
+list_section_test2=list_section_test[:]
+print(list_section_test2)
+'''
+
+'''
+list_set_test=['a','c','b']
+list_set_test=set(list_set_test)
+print(list_set_test)
+'''
+
+'''
+list_set_test=['a','c','b']
+list_set_test2=list_set_test
+print(list_set_test)
+del(list_set_test[0])
+print(list_set_test2)
+'''
+
+
+'''
+list_set_test=['a','c','b']
+list_set_test2=list_set_test[:]
+print(list_set_test)
+del(list_set_test[0])
+print(list_set_test2)
+'''
+
+
+
+'''
+x=100
+def fun():
+    global x
+    x=1
+    print(x)
+fun()
+print(x)
+'''
+
+'''
+def Outer():
+    a=10
+    def Inder():
+        a=1
+        print(a)
+        def Inder2():
+            nonlocal a
+            a=10086
+        Inder2()
+        print(a)
+    Inder()
+    print(a)
+Outer()
+'''
+
+
+'''
+def fun ():
+    print("Hello")
+dic1={"key0":fun()}
+dic1["key0"]
+'''
+
+'''
+dic2={"key0":"index0","key1":"index1","key2":"index2"}
+for i in range(0,3):
+    print(dic2["key"+str(i)])
+'''
+
+
+
+animals=["cat","tiger","dog","shark","godzilla"]
+for animal in animals:
+    print(animal.title())
+    print("I like {0} so much".format(animal))
+    print("But {0} is\' not my favourite\n".format(animal.title()))
+print("I like python so much!")
